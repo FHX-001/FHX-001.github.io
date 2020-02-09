@@ -18,7 +18,7 @@ baidu_js_push: false
 
 # Sidebar settings侧边栏
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "考核群号:981406592，我们在这里等着你的到来！"
+sidebar-about-description: "考核群号:<b style="color:red;">981406592</b>，我们在这里等着你的到来！"
 sidebar-avatar: /img/FHX_01.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
