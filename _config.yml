@@ -1,7 +1,7 @@
 # Site settings
 title: fhx  #你博客的标题
 SEOTitle: fhx  #显示在浏览器上搜索的时候显示的标题
-header-img: img/page-dl-01.jpg #显示在首页的背景图片
+header-img: img/page-bg-keyboard.png #显示在首页的背景图片
 email:
 description: "fhx" #网站介绍
 keyword: "fhx" #关键词
