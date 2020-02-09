@@ -32,7 +32,4 @@ Temporary Items
 # End of https://www.gitignore.io/api/macos
 
 # debug file
-_site
 # jekyll bat
-2018-01-16-chuangda*
-cz.md
