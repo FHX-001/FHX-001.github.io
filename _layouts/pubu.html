@@ -53,8 +53,34 @@ layout: default
     <div class="container">
         <div class="row">
           <div class="container">
-              <div class="waterfall">
-              </div>
+          <!-- add 瀑布流end by Fe -->
+            <div>
+            <section id="gallery-wrapper">
+              {% if page.pubus %}
+                  {% for pubu in page.pubus %}
+                    <article class="white-panel">
+                      <img style="width: 100%;" src="{{ site.baseurl }}/{% if pubu.img %}{{ pubu.img }}{% else %}{{ pubu.img }}{% endif %}" alt="...">
+                      <b>{{pubu.author}}</b>
+                      <p>{{pubu.title}}</p>
+                    </article>
+                  {% endfor %}
+              {% endif %}
+            </section>
+          </div>
+            <script src="{{ "/plugins/pubu/js/pinterest_grid.js " | prepend: site.baseurl }}"></script>
+            <script type="text/javascript">
+              $(function(){
+                $("#gallery-wrapper").pinterest_grid({
+                  no_columns: 4,
+                          padding_x: 10,
+                          padding_y: 10,
+                          margin_bottom: 50,
+                          single_column_breakpoint: 700
+                });
+
+              });
+            </script>
+            <!-- add 瀑布流end by Fe -->
           </div>
     <!-- Post Container -->
             <div class="
@@ -64,44 +90,6 @@ layout: default
                 <div id="content">
 
                 </div>
-                <!-- add 瀑布流 by Fe -->
-                <script src="{{ "/plugins/pu_bu_liu/js/bootstrap-waterfall.js"| prepend: site.baseurl }}"></script>
-                <script id="waterfall-template" type="text/template">
-                  {% if page.pubus %}
-                      {% for pubu in page.pubus %}
-                          <ul class="list-group">
-                        	<li class="list-group-item">
-                        	  <a href="javascript:;">
-                        		<img src="{{ site.baseurl }}/{% if pubu.img %}{{ pubu.img }}{% else %}{{ pubu.img }}{% endif %}" />
-                        	  </a>
-                        	</li>
-                        	<li class="list-group-item">
-                        	  <div class="media">
-                        		<div class="media-left">
-                              {% if pubu.author_img %}
-                        		  <a href="javascript:;">
-                        			     <img class="media-object img-rounded" style="width: 30px; height: 30px;" src="{{pubu.author_img}}" />
-                        		  </a>
-                              {% endif %}
-                        		</div>
-                        		<div class="media-body">
-                        		  <h5 class="media-heading">{{pubu.title}}</h5>
-                        		  <small>{{pubu.author}}</small>
-                        		</div>
-                        	  </div>
-                        	</li>
-                          </ul>
-                      {% endfor %}
-                  {% endif %}
-                </script>
-                <script>
-                  $('.waterfall')
-                	.data('bootstrap-waterfall-template', $('#waterfall-template').html())
-                	.waterfall();
-                </script>
-
-
-                <!-- add 瀑布流end by Fe -->
 
                 <hr style="visibility: hidden;">
 
