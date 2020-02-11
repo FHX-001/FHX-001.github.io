@@ -60,7 +60,7 @@ layout: default
               {% if page.pubus %}
                   {% for pubu in page.pubus %}
                     <article class="white-panel">
-                      <img style="width: 100%;" src="{{ site.baseurl }}/{% if pubu.img %}{{ pubu.img }}{% else %}{{ pubu.img }}{% endif %}" alt="...">
+                      <img style="width: 100%;" src="{{ pubu.img }}" alt="...">
                       <b>{{pubu.author}}</b>
                       <p>{{pubu.title}}</p>
                     </article>
