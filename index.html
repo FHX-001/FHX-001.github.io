@@ -4,23 +4,31 @@ description: "Surrender"
 head_padding: 30px
 ---
 {% for post in paginator.posts %}
-<div class="post-preview">
+<div class="row">
+  <div class="col-xs-4 col-sm-3" ><br>
     <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
-        </div>
+      <img src='{{ post.index-img | prepend: site.baseurl }}'
+      style="width:100%;">
     </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
+  </div>
+  <div class="post-preview col-xs-8 col-sm-9">
+      <a href="{{ post.url | prepend: site.baseurl }}">
+          <h2 class="post-title">
+              {{ post.title }}
+          </h2>
+          {% if post.subtitle %}
+          <h3 class="post-subtitle">
+              {{ post.subtitle }}
+          </h3>
+          {% endif %}
+          <div class="post-content-preview">
+              {{ post.content | strip_html | truncate:30 }}
+          </div>
+      </a>
+      <p class="post-meta">
+          Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+      </p>
+  </div>
 </div>
 <hr>
 {% endfor %}
