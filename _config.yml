@@ -101,6 +101,9 @@ service-worker: true
 friends: [
     {
         title: "Fe Blog",
-        href: "https://fedemo.top/"
+        href: "https://fezyh.com/"
+    },{
+        title: "决斗链接中文网",
+        href: "https://ygodl.com/fhx"
     }
 ]
